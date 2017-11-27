@@ -40,8 +40,6 @@ class PlayController: UIViewController {
                     
                     winDisplay.text = "Winner : Cross"
                 }else{
-                    
-                    
                     winDisplay.text = "Winner : Nought"
                 }
                 
@@ -53,9 +51,9 @@ class PlayController: UIViewController {
         
         
         
-        //active = false
+        active = false
         
-        /*for i in gameBoard{
+        for i in gameBoard{
             if (i == 0){
                 active = true
                 break
@@ -66,7 +64,7 @@ class PlayController: UIViewController {
             winDisplay.text = "Draw : No winner"
             winDisplay.isHidden = false
 
-        }*/
+        }
   }
     @IBOutlet weak var winDisplay: UILabel!
     
