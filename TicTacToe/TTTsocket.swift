@@ -1,33 +1,34 @@
 //
-//  TTTsocket.swift
+//  TTTSocket.swift
 //  TicTacToe
 //
-//  Created by Clementine Ferreol on 13/11/2017.
-//  Copyright © 2017 Clementine Ferreol. All rights reserved.
+//  Created by SUP'Internet 01 on 13/11/2017.
+//  Copyright © 2017 Guillaume Moulin. All rights reserved.
 //
 
 import Foundation
-
 import SocketIO
 
-class TTTSocket{
+
+class TTTSocket {
     
+    static let sharedInstance = TTTSocket()
     
-    static let shareInstance = TTTSocket()
+    let manager = SocketManager(socketURL: URL(string: "http://51.254.112.146:5666")!, config: [.log(true), .compress])
+    var socket:SocketIOClient? = nil
     
-    let socket = SocketIOClient(socketURL: URL(string: "http://51.254.112.146:5666")!, config: [])
-    
-    init(){
-        
+    init() {
+        self.socket = manager.defaultSocket
     }
     
-    func estaliblishConnection(){
-        self.socket.connect()
+    func establishConnection() {
+        self.socket!.connect()
     }
     
-    func closeConnection(){
-        self.socket.disconnect()
+    func closeConnection() {
+        self.socket!.disconnect()
     }
+    
 }
 
-//TTTSocket.shareInstance
+//TTTSocket.sharedInstance

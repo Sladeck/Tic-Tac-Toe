@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TTTSocket.shareInstance.socket.on("test") {data, ack in
+        TTTSocket.sharedInstance.socket.on("test") {data, ack in
     
     
         }

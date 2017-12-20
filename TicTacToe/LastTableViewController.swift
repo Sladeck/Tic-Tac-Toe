@@ -2,8 +2,8 @@
 //  LastTableViewController.swift
 //  TicTacToe
 //
-//  Created by Clementine Ferreol on 13/11/2017.
-//  Copyright © 2017 Clementine Ferreol. All rights reserved.
+//  Created by Guillaume Moulin on 13/11/2017.
+//  Copyright © 2017 Guillaume Moulin. All rights reserved.
 //
 
 import Foundation
